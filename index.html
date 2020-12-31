@@ -230,7 +230,7 @@
 		}
 
 		#art333 {
-			width: 150px;
+			width: 50px;
 			height: 50px;
 			left: 30px;
 			bottom: 30px;
@@ -257,8 +257,8 @@
 		}
 
 		#art444 {
-			width: 150px;
-			height: 150px;
+			width: 100px;
+			height: 100px;
 			right: 30px;
 			bottom: 30px;
 			transform: rotate(-5deg);
@@ -277,7 +277,7 @@
 		#art55 {
 			width: 200px;
 			height: 150px;
-			left: 30px;
+			left: 80px;
 			top: 40%;
 			transform: rotate(-10deg);
 			opacity: 0;
@@ -285,7 +285,7 @@
 
 		#art555 {
 			width: 150px;
-			height: 150px;
+			height: 90px;
 			left: 30px;
 			bottom: 60px;
 			transform: rotate(10deg);
@@ -335,7 +335,7 @@
 				<img src="assets/koalaman.jpg">
 			</div>
 			<div id="art333" class="art">
-				<span style="color: #646464;">What's for lunch lol</span>
+				<img src="assets/breadbreadbreadpeek.png">
 			</div>
 			<div id="art4" class="art" style="flex-direction: row;">
 				<span style="font-size: 70px; color: #646464;">🍫🐈</span>
@@ -355,7 +355,8 @@
 				<span style="color: #646464;">Gah, something went wrong !</span>
 			</div>
 			<div id="art555" class="art">
-				<img src="assets/breadbreadbreadpeek.png">
+				<a href="https://raru.re/@comfcat/105472226214179311" target="_blank"><img
+						src="assets/comfcat-thanks-you-niu.jpg"></a>
 			</div>
 			<div id="creditsCol">
 				<div id="niusers">
@@ -7122,9 +7123,8 @@
 	</div>
 
 	<div id="footer">
-		<span>Silly animation made by <a href="https://raru.re/@Miaourt">@Miaourt</a>, reach me to add your
-			art/memories related to niu.moe - You can click on the arts to go to their respective authors. - Font by <a
-				href="https://fontenddev.com/fonts/enter-command/">Font End Dev</a>.</span>
+		<span>Silly animation made by <a href="https://raru.re/@Miaourt">@Miaourt</a> - Some arts are clickable. - <a
+				href="https://github.com/Miaourt/niu-ending">Source code and credits</a>.</span>
 	</div>
 
 </body>
@@ -7322,6 +7322,7 @@
 			easing: 'linear'
 		}, 270000)
 
+		// Bunch of hack to make sure the animation stay synced with the music
 		music.onplaying = () => {
 			animation.seek(music.currentTime * 1000);
 			animation.play();
