@@ -65,13 +65,14 @@
 		}
 
 		#goodbye {
-			font-size: 50px;
 			position: absolute;
 			top: 30%;
 			width: 100%;
 			text-align: center;
 			opacity: 0;
 			text-shadow: 1px 1px 0px #242424;
+			display: flex;
+			flex-direction: column;
 		}
 
 		#bg1,
@@ -7118,7 +7119,10 @@
 					<span>nyxlucifer</span>
 				</div>
 			</div>
-			<h1 id="goodbye">Goodbye,<br />niu.moe</h1>
+			<div id="goodbye">
+				<h1 style="font-size: 50px;">Goobye,<br />niu.moe</h1>
+				<span style="font-size: 15px; opacity: 0;">Yes, a slimy farewell.</span>
+			</div>
 		</div>
 	</div>
 
@@ -7312,7 +7316,7 @@
 			targets: '#bun',
 			opacity: 0,
 			easing: 'linear'
-		}, 270000)
+		}, 265000)
 
 		// Goodbye
 		animation.add({
@@ -7320,7 +7324,12 @@
 			targets: '#goodbye',
 			opacity: 1,
 			easing: 'linear'
-		}, 270000)
+		}, 270000).add({
+			duration: 1000,
+			targets: '#goodbye span',
+			opacity: 1,
+			easing: 'linear'
+		}, 274000)
 
 		// Bunch of hack to make sure the animation stay synced with the music
 		music.onplaying = () => {
