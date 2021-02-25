@@ -1,0 +1,13 @@
+version: "3.6"
+
+## niu.moe ##
+
+services:
+
+  static:
+    image: nginx:1.19-alpine
+    restart: always
+    volumes:
+     - ./static:/usr/share/nginx/html
+    ports:
+     - 8066:80
